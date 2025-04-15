@@ -31,7 +31,6 @@ jobs:
       - name: Run Sustainability Scanner with custom rules
         run: |
           source venv/bin/activate
-          susscanner \
-            -t ./fixed.yaml \
+          susscanner ./fixed.yaml\
             -r venv/lib/python3.12/site-packages/susscanner/rules_metadata.json
 
