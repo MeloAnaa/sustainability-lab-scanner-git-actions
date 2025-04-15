@@ -24,4 +24,5 @@ jobs:
       - name: AWS Sustainability Scanner
         uses: aws-actions/sustainability-scanner@v1
         with:
-          file: 'fixed.yaml'
+          file: "/home/ana/sustainability-lab-scanner-git-actions/fixed.yaml"
+
