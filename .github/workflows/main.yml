@@ -20,9 +20,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so follow-up steps can access it
       - uses: actions/checkout@v3
 
-      # Run AWS Sustainability Scanner against the template fixed.yaml
-      - name: AWS Sustainability Scanner
-        uses: aws-actions/sustainability-scanner@v1
-        with:
-          file: "sustainability-lab-scanner-git-actions/fixed.yaml"
+      - name: Run Sustainability Scanner with custom rules
+        run: |
+          source venv/bin/activate
+          sustainability-scanner \
+            -t ./fixed.yaml \
+            -r venv/lib/python3.12/site-packages/susscanner/rules_metadata.json
 
