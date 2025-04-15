@@ -180,8 +180,8 @@
         "GroupDescription" : "Enable HTTP access via port 80",
         "SecurityGroupIngress" : [
           {"IpProtocol" : "tcp", "FromPort" : 25, "ToPort" : 25, "CidrIp" : "0.0.0.0/0"},
-          {"IpProtocol" : "tcp", "FromPort" : 25, "ToPort" : 25, "CidrIp" : { "Ref" : "SSHLocation"}}
-        ]
+           {"IpProtocol" : "tcp", "FromPort" : 25, "ToPort" : 25, "CidrIp" : { "Ref" : "SSHLocation"}}
+      ]
       }
     }
   },
